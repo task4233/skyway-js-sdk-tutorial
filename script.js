@@ -82,3 +82,24 @@ function setupCallEventHandlers(newCall) {
         setupMakeCallUI();
     });
 }
+
+// streamオブジェクトをセット
+function addVideo(call, stream) {
+    $('their-video').get(0).srcObject = stream;
+}
+
+// 切断後のvideo要素を削除する
+function removeVideo(peerId) {
+    $('#' + peerId).remove();
+}
+
+function setupMakeCallUI(){
+    $('#make-call').show();
+    $('#end-call').hide();
+}
+
+function setupEndCallUI() {
+    $('#make-call').hide();
+    $('#end-call').show();
+}
+
