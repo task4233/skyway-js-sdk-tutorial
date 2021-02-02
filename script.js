@@ -1,6 +1,6 @@
 'use strict';
 
-import apiKey from '../config';
+import apiKey from './config';
 
 let localStream = null;
 let peer = null;
